@@ -174,8 +174,8 @@
     }
     ```
   * DELETE: http://127.0.0.1:5000/products/<product_id>  
-    This end point is used to delete the mentioned product by the product_id in the databse. It does not take any http request body. A response for such a  
-    request looks like:  
+    This end point is used to delete the mentioned product by the product_id in the databse. It does not take any http request  
+    body. A response for such a request looks like:  
     ```
     {
       "id": 11, 
@@ -266,8 +266,8 @@
     ```
 
 ## Error responses:  
-  * 400 Bad Request : As the name suggests something is not proper with the request body or the request argument. For example, missing a required key in the request body JSON  
-    object. Example of how the response looks:  
+  * 400 Bad Request : As the name suggests something is not proper with the request body or the request argument.  
+    For example, missing a required key in the request body JSON object. Example of how the response looks:  
     ```
     {
         "success": False, 
@@ -275,8 +275,8 @@
         "message": "Bad request"
     }
     ```
-  * 404 Not Found : The requested resource is not present in the database. For example, when the id of the question that needs to be deleted is not present in the database.    
-    Example of how the response looks:  
+  * 404 Not Found : The requested resource is not present in the database. For example, when the id of the question  
+    that needs to be deleted is not present in the database. Example of how the response looks:  
     ```
     {
         "success": False, 
@@ -284,8 +284,8 @@
         "message": "Resource not found"
     }
     ```
-  * 422 Unprocessable : When everything is fine with the request and the resource is also present in the DB, but somehow the action cannot be performed on the database, or     
-    something cannot be processed. Example of how the response looks:    
+  * 422 Unprocessable : When everything is fine with the request and the resource is also present in the DB, but somehow  
+    the action cannot be performed on the database, or something cannot be processed. Example of how the response looks:    
     ```
     {
         "success": False, 
@@ -310,10 +310,10 @@
     }
     ```
   * 401 Unauthorized: When a request is made from an unauthorized user:  
-  ```
+    ```
     {
         "success": False, 
         "error": 403,
         "message": "Unauthorized"
     }
-  ```
+    ```
