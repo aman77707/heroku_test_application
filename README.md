@@ -15,7 +15,7 @@
     ```  
   * After installing the dependencies, set flask variable FLASK_APP. To do this execute the below command:  
     ```
-    export FLASK_APP=api.py
+    export FLASK_APP=app.py
     ```
   * Set the environment variables by running the command:  
     ```
@@ -180,5 +180,87 @@
     {
       "id": 11, 
       "message": "Deleted Successfully"
+    }
+    ```
+  * GET: http://127.0.0.1:5000/users  
+    This api end point is used to get all the registered users to the platform. A response to a request made to the api looks like:  
+    ```
+    {
+      "success": true, 
+      "users": [
+        {
+          "id": 4, 
+          "name": "Hermione Granger"
+        }, 
+        {
+          "id": 5, 
+          "name": "Ron Weasley"
+        }, 
+        {
+          "id": 6, 
+          "name": "Harry Potter"
+        }
+      ]
+    }
+    ```
+  * POST: http://127.0.0.1:5000/users  
+    This endpoint takes a JSON object of the new user about to get registered and adds the user to the database:  
+    ```
+    {
+      "name" : "Aman Bhardwaj"
+    }
+    ```
+    Response would look like after a successful registration:  
+    ```
+    {
+      "message": "Successfully Inserted in the database", 
+      "success": true, 
+      "user_name": "Hermione Granger"
+    }
+    ```
+  * DELETE: http://127.0.0.1:5000/users/<user_id>  
+    This end point is used to remove a user from the database. A response from such a request looks like:  
+    ```
+    {
+      "id": 5, 
+      "message": "Deleted Successfully"
+    }
+    ```
+  * POST: http://127.0.0.1:5000/purchase  
+    This end point allows user to make a purchase of a product. Takes a JSON body which couples user_id and product_id:  
+    ```
+    {
+      "user_id" : 4,
+      "product_id" : 3
+    }
+    ```
+    Successful response from such a request looks like:  
+    ```
+    {
+      "message": "Thankyou for shopping with us!!", 
+      "product_id": 6, 
+      "success": true, 
+      "user_id": 4
+    }
+    ```
+  * GET: http://127.0.0.1:5000/transactions  
+    This endpoint is used to get all the transactions happed against a user. A response when a request made to the api looks like:    
+    ```
+    {
+      "success": true, 
+      "userproducts": [
+        {
+          "product": 3, 
+          "user": 6
+        }, 
+        {
+          "product": 3, 
+          "user": 4
+        }, 
+        {
+          "product": 6, 
+          "user": 6
+        }
+      ]
     }
     ```
