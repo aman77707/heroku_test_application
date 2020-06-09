@@ -264,3 +264,56 @@
       ]
     }
     ```
+
+## Error responses:  
+  * 400 Bad Request : As the name suggests something is not proper with the request body or the request argument. For example, missing a required key in the request body JSON  
+    object. Example of how the response looks:  
+    ```
+    {
+        "success": False, 
+        "error": 400,
+        "message": "Bad request"
+    }
+    ```
+  * 404 Not Found : The requested resource is not present in the database. For example, when the id of the question that needs to be deleted is not present in the database.    
+    Example of how the response looks:  
+    ```
+    {
+        "success": False, 
+        "error": 404,
+        "message": "Resource not found"
+    }
+    ```
+  * 422 Unprocessable : When everything is fine with the request and the resource is also present in the DB, but somehow the action cannot be performed on the database, or     
+    something cannot be processed. Example of how the response looks:    
+    ```
+    {
+        "success": False, 
+        "error": 422,
+        "message": "Unprocessable"
+    }
+    ```
+  * 405 Method not allowed : When a resource is accessed with the wrong HTTP method. Example:    
+    ```
+    {
+        "success": False, 
+        "error": 405,
+        "message": "Method not allowed"
+    }
+    ```
+  * 403 Forbidden: When a request is made with missing permissions:  
+    ```
+    {
+        "success": False, 
+        "error": 403,
+        "message": "Forbidden from accessing the resource"
+    }
+    ```
+  * 401 Unauthorized: When a request is made from an unauthorized user:  
+  ```
+    {
+        "success": False, 
+        "error": 403,
+        "message": "Unauthorized"
+    }
+  ```
