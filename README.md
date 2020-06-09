@@ -43,3 +43,26 @@ moving to next line distorts anything
   Hello this is second line
 
 
+  {
+    "categories": [  
+      {  
+        "id": 4,   
+        "name": "electronic"  
+      },   
+      {  
+        "id": 5,   
+        "name": "groceries"  
+      },   
+      {  
+        "id": 6,   
+        "name": "clothing"  
+      },   
+      {  
+        "id": 7,   
+        "name": "foorwear"  
+      }  
+    ],   
+    "success": true  
+  }  
+
+
