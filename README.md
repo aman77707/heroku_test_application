@@ -74,3 +74,18 @@
         "success" : True  
     }
     ```
+  * POST: http://127.0.0.1:5000/categories  
+    This input takes a json of the category to be created as input, an example of such a category looks like:  
+    ```
+    {
+      "name" : "electronics"
+    }
+    ```
+    The response from such POST request would look like:  
+    ```
+    {
+      "category_name": "electronics", 
+      "message": "Successfully Inserted in the database", 
+      "success": true
+    }
+    ``` 
