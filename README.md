@@ -89,3 +89,19 @@
       "success": true
     }
     ``` 
+  * PATCH: http://127.0.0.1:5000/categories/<category_id>  
+    This input takes a json of the category to be created as input, an example of such a category looks like:  
+    ```
+    {
+      "name" : "electricals"
+    }
+    ```
+    The response from such PATCH request would look like:  
+    ```
+    {
+      "category_name": "electricals", 
+      "message": "Successfully Updated in the database", 
+      "success": true
+    }
+
+    ``` 
