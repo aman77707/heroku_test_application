@@ -10,4 +10,6 @@
 ### Pip dependencies:
   Once, the repository has been cloned in a local environment, navigate to the repository root which contains  
   requirements.txt file and execute:  
-  ```pip install -r requirements.txt```  
+  ```
+  pip install -r requirements.txt
+  ```  
