@@ -69,4 +69,6 @@
             "id": 5,   
             "name": "groceries"  
           }  
+        ],
+        "success" : True  
     }
