@@ -313,7 +313,7 @@
     ```
     {
         "success": False, 
-        "error": 403,
+        "error": 401,
         "message": "Unauthorized"
     }
     ```
