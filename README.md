@@ -317,3 +317,7 @@
         "message": "Unauthorized"
     }
     ```
+## Important Notes:  
+  * All the APIs must be called with proper JWT bearer token in the authorization header.
+  * Currently, the projet does not have a complete user registration flow. And it is assumed that the users  
+    will currently be entered using the admin JWT token
