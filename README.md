@@ -58,7 +58,7 @@
 
 ## API Endpoints:  
   * GET: http://127.0.0.1:5000/categories  
-    This endpoint is used to get all the categories of products available in the store. An example of response looks like:  
+    This endpoint is used to get a list of all the categories of products available in the store. An example of response looks like:  
     ```
     {  
           "categories": [  
@@ -103,5 +103,82 @@
       "message": "Successfully Updated in the database", 
       "success": true
     }
-
     ``` 
+  * DELETE: http://127.0.0.1:5000/categories/<category_id>  
+    This end point deletes the mentioned category ID from the system. An example of response looks like:  
+    ```
+    {
+      "id": 9, 
+      "message": "Deleted Successfully"
+    }
+    ```
+  * GET: http://127.0.0.1:5000/products  
+    This endpoint is used to get a list all the products of a specific category available in the store. An example of response looks like:  
+    ```
+    {  
+      "products": [
+        {
+          "availability_status": true, 
+          "category_id": 4, 
+          "description": "Grooming appliance for men", 
+          "id": 3, 
+          "name": "Trimmer", 
+          "price": 1120
+        }
+      ],  
+      "success" : True  
+    }
+    ```
+  * POST: http://127.0.0.1:5000/products  
+    This endpoint is used to add a new product in the store database. This API takes an input as a JSON object for the product to be entered:  
+    ```
+    {
+      "name" : "trimmer", 
+      "category" : 1 , 
+      "price" : 1120, 
+      "description": "Grooming appliance" , 
+      "availability_status" : true
+    }
+    ```
+    Response for such request looks like:
+    ```
+    {
+      "availability_status": true, 
+      "category_id": 4, 
+      "description": "Grooming appliance", 
+      "name": "trimmer", 
+      "price": 1120, 
+      "success": true
+    }
+    ```
+  * PATCH: http://127.0.0.1:5000/products/<product_id>  
+    This endpoint is used to update the details of a product in the store database. This API takes an input as a JSON object for the product to be entered:   
+    ```
+    {
+      "name" : "trimmer", 
+      "category" : 1 , 
+      "price" : 1120, 
+      "description": "Grooming appliance" , 
+      "availability_status" : false
+    }
+    ```
+    Response for such request looks like:
+    ```
+    {
+      "availability_status": false, 
+      "category_id": 4, 
+      "description": "Grooming appliance", 
+      "name": "trimmer", 
+      "price": 1120, 
+      "success": true
+    }
+    ```
+  * DELETE: http://127.0.0.1:5000/products/<product_id>  
+    This end point is used to delete the mentioned product by the product_id in the databse. It does not take any http request body. A response for such a  
+    request looks like:  
+    ```
+    {
+      "id": 11, 
+      "message": "Deleted Successfully"
+    }
+    ```
