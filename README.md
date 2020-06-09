@@ -59,6 +59,7 @@
 ## API Endpoints:  
   * GET: http://127.0.0.1:5000/categories  
     This endpoint is used to get all the categories of products available in the store. An example of response looks like:  
+    ```
     {  
           "categories": [  
           {  
@@ -69,6 +70,7 @@
             "id": 5,   
             "name": "groceries"  
           }  
-        ],
+        ],  
         "success" : True  
     }
+    ```
