@@ -55,3 +55,18 @@
     This user can just view the products and categories:  
       * Get categories
       * Get Products
+
+## API Endpoints:  
+  * GET: http://127.0.0.1:5000/categories  
+    This endpoint is used to get all the categories of products available in the store. An example of response looks like:  
+    {  
+          "categories": [  
+          {  
+            "id": 4,   
+            "name": "electronic"  
+          },   
+          {  
+            "id": 5,   
+            "name": "groceries"  
+          }  
+    }
