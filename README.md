@@ -56,6 +56,10 @@
       * Get categories
       * Get Products
 
+## Working Tokens for each user:  
+  * Admin Token :   
+  * Customer Token :  
+
 ## API Endpoints:  
   * GET: http://127.0.0.1:5000/categories  
     This endpoint is used to get a list of all the categories of products available in the store. An example of response looks like:  
@@ -74,6 +78,7 @@
         "success" : True  
     }
     ```
+    Permitted Users : Admin, Customer, Guest  
   * POST: http://127.0.0.1:5000/categories  
     This input takes a json of the category to be created as input, an example of such a category looks like:  
     ```
@@ -89,6 +94,7 @@
       "success": true
     }
     ``` 
+    Permitted Users : Admin  
   * PATCH: http://127.0.0.1:5000/categories/<category_id>  
     This input takes a json of the category to be created as input, an example of such a category looks like:  
     ```
@@ -104,6 +110,7 @@
       "success": true
     }
     ``` 
+    Permitted Users : Admin  
   * DELETE: http://127.0.0.1:5000/categories/<category_id>  
     This end point deletes the mentioned category ID from the system. An example of response looks like:  
     ```
@@ -112,6 +119,7 @@
       "message": "Deleted Successfully"
     }
     ```
+    Permitted Users : Admin  
   * GET: http://127.0.0.1:5000/products  
     This endpoint is used to get a list all the products of a specific category available in the store. An example of response looks like:  
     ```
@@ -129,6 +137,7 @@
       "success" : True  
     }
     ```
+    Permitted Users : Admin, Customer, Guest  
   * POST: http://127.0.0.1:5000/products  
     This endpoint is used to add a new product in the store database. This API takes an input as a JSON object for the product to be entered:  
     ```
@@ -151,6 +160,7 @@
       "success": true
     }
     ```
+    Permitted Users : Admin  
   * PATCH: http://127.0.0.1:5000/products/<product_id>  
     This endpoint is used to update the details of a product in the store database. This API takes an input as a JSON object for the product to be entered:   
     ```
@@ -173,6 +183,7 @@
       "success": true
     }
     ```
+    Permitted Users : Admin  
   * DELETE: http://127.0.0.1:5000/products/<product_id>  
     This end point is used to delete the mentioned product by the product_id in the databse. It does not take any http request  
     body. A response for such a request looks like:  
@@ -182,6 +193,7 @@
       "message": "Deleted Successfully"
     }
     ```
+    Permitted Users : Admin  
   * GET: http://127.0.0.1:5000/users  
     This api end point is used to get all the registered users to the platform. A response to a request made to the api looks like:  
     ```
@@ -203,6 +215,7 @@
       ]
     }
     ```
+    Permitted Users : Admin  
   * POST: http://127.0.0.1:5000/users  
     This endpoint takes a JSON object of the new user about to get registered and adds the user to the database:  
     ```
@@ -218,6 +231,7 @@
       "user_name": "Hermione Granger"
     }
     ```
+    Permitted Users : Admin  
   * DELETE: http://127.0.0.1:5000/users/<user_id>  
     This end point is used to remove a user from the database. A response from such a request looks like:  
     ```
@@ -226,6 +240,7 @@
       "message": "Deleted Successfully"
     }
     ```
+    Permitted Users : Admin  
   * POST: http://127.0.0.1:5000/purchase  
     This end point allows user to make a purchase of a product. Takes a JSON body which couples user_id and product_id:  
     ```
@@ -243,6 +258,7 @@
       "user_id": 4
     }
     ```
+    Permitted Users : Customer   
   * GET: http://127.0.0.1:5000/transactions  
     This endpoint is used to get all the transactions happed against a user. A response when a request made to the api looks like:    
     ```
@@ -264,6 +280,7 @@
       ]
     }
     ```
+    Permitted Users : Admin  
 
 ## Error responses:  
   * 400 Bad Request : As the name suggests something is not proper with the request body or the request argument.  
