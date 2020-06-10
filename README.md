@@ -6,6 +6,14 @@
   improvement it has definitely achored me at a position from where I can take this project from a sample   
   POC to a completely built working website as an e-commerce platform.  
 
+## TechStack:  
+  The application has a backend that uses these key technologies:        
+  * Flask framework
+  * Flask Sqlalchemy ORM
+  * Flask-CORS
+  * AUTH0
+  * JWT 
+
 ## Dependencies and hosting instructions:
 ### Carry out the following steps:
   * Once, the repository has been cloned in a local environment, navigate to the repository root which contains  
@@ -56,9 +64,10 @@
       * Get categories
       * Get Products
 
-## Working Tokens for each user:  
+## Working Tokens for type of each user:  
   * Admin Token :   
   * Customer Token :  
+  * Guest: Not Required  
 
 ## API Endpoints:  
   * GET: http://127.0.0.1:5000/categories  
